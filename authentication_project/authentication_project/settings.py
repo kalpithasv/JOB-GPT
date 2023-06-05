@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication_project',
 ]
 
 MIDDLEWARE = [
@@ -77,15 +78,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'kalpitha',
-        'USER': 'kalpitha',
-        'PASSWORD': 'Kalps@8604',
-        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
 
 AUTH_USER_MODEL = 'auth.User'
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3002', 
+]
 
 
 

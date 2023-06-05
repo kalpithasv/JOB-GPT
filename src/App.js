@@ -1,10 +1,12 @@
+import React from 'react';
+import Auth from './Pages/Auth';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <h1> Hello world! </h1>
+      <Auth />
     </div>
   );
-}
+};
 
 export default App;
