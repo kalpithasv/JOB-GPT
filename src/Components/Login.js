@@ -3,6 +3,7 @@ import { loginFields } from "../Constants/formFields";
 import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
+import Axios from 'axios';
 
 const fields=loginFields;
 let fieldsState = {};
@@ -14,6 +15,9 @@ export default function Login(){
     const handleChange=(e)=>{
         setLoginState({...loginState,[e.target.id]:e.target.value})
     }
+    
+    Axios.post('https://jsonplaceholder.typicode.com/posts',{Name:'Kalpitha'})
+    .then(json => console.log(json))
 
     const handleSubmit=(e)=>{
         e.preventDefault();
