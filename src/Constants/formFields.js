@@ -35,7 +35,7 @@ const signupFields=[
     {
         labelText:"Email address",
         labelFor:"email-address",
-        id:"email-address",
+        id:"email_address",
         name:"email",
         type:"email",
         autoComplete:"email",
@@ -55,7 +55,7 @@ const signupFields=[
     {
         labelText:"Confirm Password",
         labelFor:"confirm-password",
-        id:"confirm-password",
+        id:"confirm_password",
         name:"confirm-password",
         type:"password",
         autoComplete:"confirm-password",

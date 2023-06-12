@@ -16,8 +16,14 @@ export default function Login(){
         setLoginState({...loginState,[e.target.id]:e.target.value})
     }
     
-    Axios.post('https://jsonplaceholder.typicode.com/posts',{Name:'Kalpitha'})
-    .then(json => console.log(json))
+    var formData = new FormData();
+    formData.append("Name", 'kalpitha');
+    formData.append("Username", 'kalps');
+    formData.append("Password", '12345');
+    formData.append("Email", 'ikno');
+
+    Axios.post('http://localhost:8000/restapi/',formData)
+    .then(json => console.log(json.data))
 
     const handleSubmit=(e)=>{
         e.preventDefault();
